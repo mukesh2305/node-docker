@@ -1,0 +1,19 @@
+version: '3'
+services:
+  node-app:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    environment:
+      - PORT=3000
+    # env_file:
+    #   - .env
+
+
+
+    # docker-compose up -d --build
+
+    # docker-compose down -v (it will remove all the anonumes  volumes)
